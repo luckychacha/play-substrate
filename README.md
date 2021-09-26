@@ -207,7 +207,7 @@ pub fn local_luckychacha_testnet_config() -> Result<ChainSpec, String> {
 ![启动 bootnode 节点](./bootnode-run.png)
 
 
-> 3.启动验证人节点
+> 3.启动验证人节点【由于时间来不及，验证人节点启动暂时存在问题，还需后续研究】
 
 ```shell
 ./target/release/node-template \
