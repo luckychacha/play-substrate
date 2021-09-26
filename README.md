@@ -1,20 +1,22 @@
 > 编程作业，需要完成以下要求并且提交代码链接：
 > 1.为 template 模块的 do_something 添加 benchmark 用例（也可以是其它自选模块的可调用函数），并且将 benchmark 运行的结果转换为对应的权重定义；
-> （1）编写 benchmarking.rs【pallers/template/src/benchmarking.rs】
-> （2）cargo build > --features runtime-benchmarks --release
-> （3）生成 weights.rs 文件，执行命令：
-> node-template benchmark \
-> --chain dev \
-> --execution=wasm \
-> --wasm-execution=compiled \
-> --pallet pallet_benchmark_demo \
-> --extrinsic do_something \
-> --steps 20 \
-> --repeat 50 \
-> --template=.maintain/frame-weight-template.hbs \
-> --output=./pallets/benchmark-demo/src/weights_test.rs
->（4）修改 pallets/template/src/lib.rs
 
+```shell 
+ （1）编写 benchmarking.rs【pallers/template/src/benchmarking.rs】
+ （2）cargo build  --features runtime-benchmarks --release
+ （3）生成 weights.rs 文件，执行命令：
+ node-template benchmark \
+ --chain dev \
+ --execution=wasm \
+ --wasm-execution=compiled \
+ --pallet pallet_benchmark_demo \
+ --extrinsic do_something \
+ --steps 20 \
+ --repeat 50 \
+ --template=.maintain/frame-weight-template.hbs \
+ --output=./pallets/benchmark-demo/src/weights_test.rs
+（4）修改 pallets/template/src/lib.rs
+```
 
 ```rust
 
