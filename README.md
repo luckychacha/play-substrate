@@ -216,4 +216,4 @@ pub fn local_luckychacha_testnet_config() -> Result<ChainSpec, String> {
 --name validator01
 ```
 
-![启动 bootnode 节点](./bootnode-run.png)
+![启动 bootnode 节点](./validator.png)
