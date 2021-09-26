@@ -1,5 +1,5 @@
 //! Benchmark-demo pallet benchmarking.
-
+// 编译标签，表示指定了 runtime-benchmarks 这种形式编译的时候才会引入当前的子模块。
 #![cfg(feature = "runtime-benchmarks")]
 
 use super::*;
