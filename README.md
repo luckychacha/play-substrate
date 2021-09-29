@@ -5,16 +5,17 @@
  （1）编写 benchmarking.rs【pallets/template/src/benchmarking.rs】
  （2）编译：cargo build  --features runtime-benchmarks --release
  （3）生成 weights.rs 文件，执行命令：
- node-template benchmark \
- --chain dev \
- --execution=wasm \
- --wasm-execution=compiled \
- --pallet pallet_benchmark_demo \
- --extrinsic do_something \
- --steps 20 \
- --repeat 50 \
- --template=.maintain/frame-weight-template.hbs \
- --output=./pallets/benchmark-demo/src/weights.rs
+target/release/node-template benchmark \
+--chain dev \
+--execution=wasm \
+--wasm-execution=compiled \
+--pallet pallet_template \
+--extrinsic do_something \
+--steps 20 \
+--repeat 50 \
+--template=.maintain/frame-weight-template.hbs \
+--output=pallets/template/src/weights.rs
+
 （4）修改 pallets/template/src/lib.rs
 ```
 
