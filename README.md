@@ -37,13 +37,14 @@ pub mod pallet {
 	pub trait Config: frame_system::Config {
 		/// Because this pallet emits events, it depends on the runtime's definition of an event.
 		type Event: From<Event<Self>> + IsType<<Self as frame_system::Config>::Event>;
-
+		//  WeightInfo 从 weights.rs 文件中获取
 		type WeightInfo: WeightInfo;
 	}
   #[pallet::call]
 	impl<T: Config> Pallet<T> {
 		/// An example dispatchable that takes a single value as a parameter, writes the value to
 		/// storage and emits an event. This function must be dispatched by a signed extrinsic.
+		// 从文件中读取 do_something 函数的 weight。
 		#[pallet::weight(T::WeightInfo::do_something(*something))]
 		pub fn do_something(origin: OriginFor<T>, something: u32) -> DispatchResultWithPostInfo {
 			// Check that the extrinsic was signed and get the signer.
