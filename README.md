@@ -14,7 +14,7 @@
  --steps 20 \
  --repeat 50 \
  --template=.maintain/frame-weight-template.hbs \
- --output=./pallets/benchmark-demo/src/weights_test.rs
+ --output=./pallets/benchmark-demo/src/weights.rs
 （4）修改 pallets/template/src/lib.rs
 ```
 
